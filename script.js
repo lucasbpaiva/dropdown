@@ -11,3 +11,10 @@ dropdownBtn.addEventListener("click", (event) => {
     event.stopPropagation();
     toggleDropdown();
 });
+
+//close dropdown when clicking outside
+document.documentElement.addEventListener("click", () => {
+    if (dropdownMenu.classList.contains("show")) {
+        toggleDropdown();
+    }
+});
